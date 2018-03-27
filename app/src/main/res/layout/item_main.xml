@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_main_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/item_main_cv"
+        style="@style/CardView.Light"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/item_main_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_photo_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@mipmap/ic_launcher_round"
+                android:importantForAccessibility="no"/>
+
+            <TextView
+                android:id="@+id/item_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/item_photo_iv"
+                app:layout_constraintStart_toEndOf="@+id/item_photo_iv"
+                app:layout_constraintTop_toTopOf="@+id/item_photo_iv"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Matheus" />
+
+            <TextView
+                android:id="@+id/item_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/item_photo_iv"
+                app:layout_constraintStart_toEndOf="@+id/item_photo_iv"
+                app:layout_constraintTop_toTopOf="@+id/item_photo_iv"
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="Rua Coronel Oscar Porto 208" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
