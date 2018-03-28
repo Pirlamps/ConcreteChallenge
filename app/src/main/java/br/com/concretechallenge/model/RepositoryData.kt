@@ -4,4 +4,4 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class RepositoryData():Parcelable
+data class RepositoryData(val name:String):Parcelable
