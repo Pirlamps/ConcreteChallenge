@@ -8,10 +8,8 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View.GONE
 import android.view.View.VISIBLE
-import android.widget.ProgressBar
 import br.com.concretechallenge.R
 import br.com.concretechallenge.experimental.Command
-import br.com.concretechallenge.uiutil.Progress
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +36,6 @@ class MainActivity : AppCompatActivity() {
             model.loadUsers()
         }
 
-//        model.getUsers().observe(this, Observer { users -> mainAdapter.setData(users) })
         model.getCommand().observe(this, Observer { command -> executor(command) })
     }
 
@@ -46,8 +43,6 @@ class MainActivity : AppCompatActivity() {
         when (command) {
             is Command.ShowProgress -> progressBar_cyclic.visibility = VISIBLE
             is Command.HideProgess -> progressBar_cyclic.visibility = GONE
-//            is Command.ShowProgress -> println("show progress")
-//            is Command.HideProgess -> println("hide progress")
             is Command.ShowData -> mainAdapter.setData(command.data)
         }
     }

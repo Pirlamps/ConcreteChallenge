@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.concretechallenge.R
+import br.com.concretechallenge.model.Item
 import br.com.concretechallenge.model.UserData
 import kotlinx.android.synthetic.main.item_main.view.*
 
-class MainAdapter(var dataSet: List<UserData>? = null) : RecyclerView.Adapter<MainAdapter.MainHolder>() {
+class MainAdapter(var dataSet: List<Item>? = null) : RecyclerView.Adapter<MainAdapter.MainHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
@@ -24,15 +25,15 @@ class MainAdapter(var dataSet: List<UserData>? = null) : RecyclerView.Adapter<Ma
         holder.bind(dataSet?.get(position))
     }
 
-    fun setData(dataSet: List<UserData>?) {
+    fun setData(dataSet: List<Item>?) {
         this.dataSet = dataSet
         notifyDataSetChanged()
     }
 
     inner class MainHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
-        fun bind(userData: UserData?) {
-            itemView.item_name_tv.text = userData?.name
-            itemView.item_address_tv.text = userData?.address
+        fun bind(item: Item?) {
+            itemView.item_name_tv.text = item?.name
+            itemView.item_address_tv.text = item?.description
         }
     }
 }
