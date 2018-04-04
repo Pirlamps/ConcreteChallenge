@@ -1,12 +1,5 @@
 package br.com.concretechallenge.experimental
 
-import kotlinx.coroutines.experimental.CancellableContinuation
-import kotlinx.coroutines.experimental.suspendCancellableCoroutine
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.HttpException
-import retrofit2.Response
-
 
 //public inline fun <T, R> T.errorLet(block: (T) -> R): R {
 //    contract {

@@ -10,7 +10,7 @@ sealed class Behavior {
 }
 
 fun execute(command: Behavior) {
-    when(command){
+    when (command) {
         is Behavior.ShowLoading -> println("Loading")
         is Behavior.HideLoading -> println("Finished Loading")
         is Behavior.RequestData -> command.controllerBlock()

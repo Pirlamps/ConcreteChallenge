@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.concretechallenge.R
 import br.com.concretechallenge.model.Item
-import br.com.concretechallenge.model.UserData
 import kotlinx.android.synthetic.main.item_main.view.*
 
 class MainAdapter(var dataSet: List<Item>? = null) : RecyclerView.Adapter<MainAdapter.MainHolder>() {

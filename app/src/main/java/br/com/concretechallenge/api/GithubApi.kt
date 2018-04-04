@@ -2,7 +2,6 @@ package br.com.concretechallenge.api
 
 import br.com.concretechallenge.model.RepositoryData
 import kotlinx.coroutines.experimental.Deferred
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
