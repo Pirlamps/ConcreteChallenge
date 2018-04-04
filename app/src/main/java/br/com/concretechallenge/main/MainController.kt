@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainController {
 
 
-    suspend fun getData(): RepositoryData {
+    suspend fun getRepos(): RepositoryData {
 
         val retrofit = Retrofit.Builder().apply {
             baseUrl("https://api.github.com/")
@@ -19,10 +19,10 @@ class MainController {
 
         val service = retrofit.create(GithubApi::class.java)
         val response = service.searchRepos(
-                "java",
+                "Java",
                 "stars",
                 1,
-                2
+                10
         ).await()
         println(response)
         return response

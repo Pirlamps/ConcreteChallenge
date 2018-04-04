@@ -12,13 +12,13 @@ class MainViewModel : ViewModel() {
     private val controller = MainController()
 
     fun getCommand(): LiveData<Command> {
-        return command!!
+        return command
     }
 
-    fun loadUsers() {
+    fun loadRepos() {
         command.value = Command.ShowProgress()
         async {
-            val dataSet = controller.getData()
+            val dataSet = controller.getRepos()
             command.postValue(Command.HideProgess())
             command.postValue(Command.ShowData(dataSet.items))
         }

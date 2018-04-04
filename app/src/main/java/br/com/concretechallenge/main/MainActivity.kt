@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         sync_fab.setOnClickListener {
-            model.loadUsers()
+            model.loadRepos()
         }
 
         model.getCommand().observe(this, Observer { command -> executor(command) })
