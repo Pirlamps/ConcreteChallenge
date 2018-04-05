@@ -8,7 +8,6 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View.GONE
 import android.view.View.VISIBLE
-import br.com.concretechallenge.R
 import br.com.concretechallenge.experimental.Command
 import kotlinx.android.synthetic.main.activity_main.*
 
